@@ -1,26 +1,32 @@
-
+from Validator import Validator
 import random 
+import pandas as pd
 
 class Node: 
-    def __init__(self, n, _features): 
-        self.possibleFeatures = n
+    def __init__(self, _features, filepath): 
         self.features = _features
         self.children = []
         self.score = -1
-        self.evaluate()
+        self.filepath = filepath
+        df = pd.read_csv(filepath, delim_whitespace=True, header=None, engine="python")
+        self.possibleFeatures = df.shape[1] - 1
+        self.evaluate(filepath)
 
-    def evaluate(self): 
+
+    def evaluate(self, filepath): 
         # returns integer 
-        self.score = random.uniform(0, 100)
+        # self.score = random.uniform(0, 100)
+        valid = Validator()
+        self.score = valid.validate(self.features, filepath)
 
     def returnScore(self):
         return self.score
     
     def addFeature(self):
-        for i in range(0, self.possibleFeatures): 
+        for i in range(1, self.possibleFeatures + 1): 
             if i not in self.features: 
                 features = self.features + [i]
-                newNode = Node(self.possibleFeatures, features)
+                newNode = Node(features, self.filepath)
                 self.children.append(newNode)
 
     def forwardSelection(self): 
@@ -56,14 +62,14 @@ class Node:
         for i in self.features: 
             newFeatures = list(self.features)
             newFeatures.remove(i)
-            newNode = Node(self.possibleFeatures, newFeatures)
+            newNode = Node(newFeatures, self.filepath)
             self.children.append(newNode)
 
 
 
     def backwardElimination(self):
         print("Beginning search.")
-        self.features = list(range(self.possibleFeatures))
+        self.features = list(range(1, self.possibleFeatures + 1))
         accuracy, features =  self.backwardEliminationHelper()
         print("The best accuracy was ", accuracy, " with features: ", features)
 

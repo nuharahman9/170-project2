@@ -23,10 +23,19 @@ import pandas as pd
 # print(tempClass.df)
 
 
-filepath = "/Users/terencemui/Documents/CS170/170-project2/large-test-dataset-1.txt"
-testValid = Validator()
-testValid.validate([1, 15, 27], filepath)
+# filepath = "/Users/terencemui/Documents/CS170/170-project2/large-test-dataset-1.txt"
+# testValid = Validator()
+# testValid.validate([1, 15, 27], filepath)
 
 # filepath = "/Users/terencemui/Documents/CS170/170-project2/small-test-dataset.txt"
 # testValid = Validator()
-# testValid.validate([3, 5, 7], filepath)
+# print(testValid.validate([3, 5], filepath))
+
+# filepath = "/Users/terencemui/Documents/CS170/170-project2/small-test-dataset.txt"
+# filepath = "/Users/terencemui/Documents/CS170/170-project2/large-test-dataset-1.txt"
+# filepath = "/Users/terencemui/Documents/CS170/170-project2/CS170_Spring_2023_Small_data__95.txt"
+filepath = "/Users/terencemui/Documents/CS170/170-project2/CS170_Spring_2023_Large_data__95.txt"
+
+node = Node([], filepath)
+node.forwardSelection()
+# node.backwardElimination()

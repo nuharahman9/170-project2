@@ -23,5 +23,4 @@ class Classifier:
                     min = distance
                     closestNeighbor = row[0]
 
-
         return closestNeighbor
