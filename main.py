@@ -29,13 +29,20 @@ import pandas as pd
 
 # filepath = "/Users/terencemui/Documents/CS170/170-project2/small-test-dataset.txt"
 # testValid = Validator()
-# print(testValid.validate([3, 5], filepath))
+# print(testValid.validate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40], filepath))
 
 # filepath = "/Users/terencemui/Documents/CS170/170-project2/small-test-dataset.txt"
 # filepath = "/Users/terencemui/Documents/CS170/170-project2/large-test-dataset-1.txt"
-# filepath = "/Users/terencemui/Documents/CS170/170-project2/CS170_Spring_2023_Small_data__95.txt"
-filepath = "/Users/terencemui/Documents/CS170/170-project2/CS170_Spring_2023_Large_data__95.txt"
+filepath = "/Users/terencemui/Documents/CS170/170-project2/CS170_Spring_2023_Small_data__95.txt"
+# filepath = "/Users/terencemui/Documents/CS170/170-project2/CS170_Spring_2023_Large_data__95.txt"
 
 node = Node([], filepath)
-node.forwardSelection()
+node.forwardSelection() 
 # node.backwardElimination()
+
+# testValid = Validator()
+# print(testValid.validate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40], filepath))
+# print(testValid.validate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], filepath))
+
+# df = pd.read_csv(filepath, delim_whitespace=True, header=None, engine="python")
+# print(df.shape)
