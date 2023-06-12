@@ -16,7 +16,8 @@ elif option == "3":
 elif option == "4": 
     filepath = "data/CS170_Spring_2023_Large_data__95.txt"
 else: 
-    quit  
+    print("Invalid input\n")
+    quit()
 node = Node([], filepath)
 
 option = input("please select the desired option for search:\n1. Forward selection\n2. Backward elimination\nType anything else to quit :+)\nPlease enter a number:\n")
@@ -25,5 +26,5 @@ if option == "1":
 if option == "2": 
     node.backwardElimination()
 else: 
-    quit
-# node.backwardElimination()
+    print("Invalid input\n")
+    quit()

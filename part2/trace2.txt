@@ -1,0 +1,29 @@
+Welcome to our evluation function. Please enter the number of the dataset you would like to test: 
+1. Small test dataset 
+2. Large test dataset
+1
+Please enter the number of features you would like to test: 3
+
+
+Please input the features followed by enter
+3
+5
+7
+Running k-fold cross validation
+The file data/small-test-dataset.txt has an accuracy of 0.89 when tested with features: [3, 5, 7]
+
+
+
+Welcome to our evluation function. Please enter the number of the dataset you would like to test: 
+1. Small test dataset 
+2. Large test dataset
+2
+Please enter the number of features you would like to test: 3
+
+
+Please input the features followed by enter
+1
+15
+27
+Running k-fold cross validation
+The file data/large-test-dataset-1.txt has an accuracy of 0.95 when tested with features: [1, 15, 27]
